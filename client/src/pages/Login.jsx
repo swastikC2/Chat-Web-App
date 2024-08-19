@@ -20,8 +20,7 @@ const Login = () => {
     <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
       <div className=" w-full p-6 rounded-lg shadow-md bg-gray-200">
         <h1 className="text-3xl font-semibold text-center text-slate-700">
-          Login to
-          <span className="text-blue-700"> Chat Application</span>
+          Login
         </h1>
 
         <form onSubmit={handleSubmit}>
@@ -56,7 +55,7 @@ const Login = () => {
             to={"/signup"}
             className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block"
           >
-            {"Don't"} have an account?
+            {"Don't have an account?"}
           </Link>
 
           <div>
