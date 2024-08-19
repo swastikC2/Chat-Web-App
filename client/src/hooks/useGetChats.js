@@ -13,14 +13,18 @@ const useGetChats = () => {
         const res = await fetch("/api/friendList");
 
         const data = await res.json();
+        console.log(data); // Debugging
 
-        if (data.error) {
-          throw new Error(data.error);
+        if (!res.ok) {
+          throw new Error(data.message || "Failed to fetch chats");
         }
+
+        setChats(Array.isArray(data) ? data : []);
 
         setChats(data);
       } catch (error) {
         toast.error(error.message);
+        setChats([]);
       } finally {
         setLoading(false);
       }
