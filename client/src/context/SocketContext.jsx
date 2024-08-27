@@ -16,11 +16,14 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io("http://127.0.0.1:3000", {
-        query: {
-          userId: authUser._id,
-        },
-      });
+      const socket = io(
+        "https://chat-web-mrlajyov5-swastikcs-projects.vercel.app/",
+        {
+          query: {
+            userId: authUser._id,
+          },
+        }
+      );
 
       setSocket(socket);
 
