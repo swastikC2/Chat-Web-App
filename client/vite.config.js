@@ -7,11 +7,9 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://chat-web-mrlajyov5-swastikcs-projects.vercel.app/",
+        target: "https://chat-web-app-nine.vercel.app/",
         secure: false,
       },
     },
   },
 });
-
-//https://chat-web-app-b.vercel.app/
