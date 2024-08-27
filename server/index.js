@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import messageRoute from "./routes/message.routes.js";
 import usersRoute from "./routes/users.routes.js";
 import { app, server } from "./socket/socket.js";
+import cors from "cors";
 
 dotenv.config();
 
@@ -23,6 +24,11 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(
+  cors({
+    origin: "http://localhost:5173/",
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("Hello");
