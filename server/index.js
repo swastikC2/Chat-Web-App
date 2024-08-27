@@ -32,7 +32,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send("Hello");
+  res.send("Hello there");
 });
 
 app.use("/api/auth", authRoutes);
